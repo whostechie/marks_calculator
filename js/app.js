@@ -5,6 +5,53 @@ let sub4_inputs = document.querySelectorAll("#sub4 input");
 let sub5_inputs = document.querySelectorAll("#sub5 input");
 let calc_btn = document.querySelector(".calc-btn");
 
+document.querySelectorAll(".sub_title").forEach((subject) => {
+    subject.nextElementSibling.firstElementChild.addEventListener("keyup", (e) => {
+        if(e.target.value > 70){
+            e.target.style = `border: 2px solid red`;
+        }
+        else{
+            e.target.style = `border: 1px transparent;`;
+        }
+    })
+
+    subject.nextElementSibling.nextElementSibling.firstElementChild.addEventListener("keyup", (e) => {
+        if(e.target.value > 50){
+            e.target.style = `border: 2px solid red`;
+        }
+        else{
+            e.target.style = `border: 1px transparent;`;
+        }
+    })
+
+    subject.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.addEventListener("keyup", (e) => {
+        if(e.target.value > 50){
+            e.target.style = `border: 2px solid red`;
+        }
+        else{
+            e.target.style = `border: 1px transparent;`;
+        }
+    })
+
+    subject.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.addEventListener("keyup", (e) => {
+        if(e.target.value > 100){
+            e.target.style = `border: 2px solid red`;
+        }
+        else{
+            e.target.style = `border: 1px transparent;`;
+        }
+    })
+
+    subject.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.addEventListener("keyup", (e) => {
+        if(e.target.value > 25){
+            e.target.style = `border: 2px solid red`;
+        }
+        else{
+            e.target.style = `border: 1px transparent;`;
+        }
+    })
+});
+
 calc_btn.addEventListener("click", () => {
 
     for(let i = 0; i < sub1_inputs.length; i++){
@@ -56,15 +103,6 @@ calc_btn.addEventListener("click", () => {
             break;
         }
     }
-
-    // sub2_inputs.forEach((input) => {
-    //     if (input.value != "") {
-    //         total_calc("sub2");
-    //     }
-    //     else{
-    //         document.querySelector("#sub2").lastElementChild.innerHTML = "";
-    //     }
-    // })
 })
 
 function total_calc(sub){
