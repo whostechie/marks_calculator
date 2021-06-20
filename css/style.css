@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    font-size: 5rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    margin-top: 2rem;
+    text-align: center;
+}
+.main-container{
+    padding: 2rem;
+    margin-top: 2rem;
+}
+.marks-container{
+    height: 40rem;
+    box-shadow: 5px 5px 3rem 0px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+}
+.subjects{
+    width: 12rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    overflow: hidden;
+}
+.std{
+    height: 14.29%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 6px;
+    font-size: 1.19rem;
+}
+.std_title .std{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.std_title .std div{
+    font-size: 0.8rem;
+}
+.std_title .std strong{
+    font-size: 1.5rem;
+}
+.sub_title{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+.std_title{
+    font-weight: 600;
+}
+.total{
+    font-size: 2.3rem;
+}
+
+input[type="number"]{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 1px transparent;
+    border-radius: 5px;
+    background-color: rgb(240, 240, 240);
+    appearance: textfield;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input:focus{
+    border: 2px solid black;
+}
+.calc-btn{
+    margin: 4rem 0rem;
+    padding: 1rem 5rem;
+    background-color: black;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    border: 1px transparent;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.4);
+    transform: translateY(0);
+    transition: transform 0.2s ease-out;
+}
+.calc-btn:hover{
+    cursor: pointer;
+    transform: translateY(5%);
+}
+footer{
+    margin: 2rem;
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+@media (max-width: 50rem) {
+    .marks-container{
+        width: 35rem;
+        height: 55rem;
+    }
+}
