@@ -115,6 +115,9 @@ footer{
     font-size: 1.5rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+footer .text{
+    text-align: center;
+}
 @media (max-width: 50rem) {
     .marks-container{
         width: 35rem;
