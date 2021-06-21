@@ -3,6 +3,7 @@ let sub2_inputs = document.querySelectorAll("#sub2 input");
 let sub3_inputs = document.querySelectorAll("#sub3 input");
 let sub4_inputs = document.querySelectorAll("#sub4 input");
 let sub5_inputs = document.querySelectorAll("#sub5 input");
+let no_of_sub = document.querySelectorAll(".marks-container .subjects");
 let calc_btn = document.querySelector(".calc-btn");
 
 document.querySelectorAll(".sub_title").forEach((subject) => {
@@ -53,56 +54,73 @@ document.querySelectorAll(".sub_title").forEach((subject) => {
 });
 
 calc_btn.addEventListener("click", () => {
+    for(let k = 1; k < no_of_sub.length; k++){
+        console.log(no_of_sub[k]);
+        console.log(document.querySelectorAll(`#${no_of_sub[k].id} input`));
+        let subject_inputs = document.querySelectorAll(`#${no_of_sub[k].id} input`);
 
-    for(let i = 0; i < sub1_inputs.length; i++){
-        if (sub1_inputs[i].value != "") {
-            total_calc("sub1");
+        for(let g = 0; g < subject_inputs.length; g++){
+            if(subject_inputs[g].value != ""){
+                total_calc(`${String(no_of_sub[k].id)}`);
+            }
+            else{
+                document.querySelector(`#${String(no_of_sub[k].id)}`).lastElementChild.innerHTML = "";
+                break;
+            }
         }
-        else{
-            document.querySelector("#sub1").lastElementChild.innerHTML = "";
-            break;
-        }
+        // let subject_inputs = document.querySelectorAll(`${no_of_sub[k].className} input`);
+        // for(let g = 0; g < no_of_sub[k].length;)
     }
 
-    for(let i = 0; i < sub2_inputs.length; i++){
-        if (sub2_inputs[i].value != "") {
-            total_calc("sub2");
-        }
-        else{
-            document.querySelector("#sub2").lastElementChild.innerHTML = "";
-            break;
-        }
-    }
+    // for(let i = 0; i < sub1_inputs.length; i++){
+    //     if (sub1_inputs[i].value != "") {
+    //         total_calc("sub1");
+    //     }
+    //     else{
+    //         document.querySelector("#sub1").lastElementChild.innerHTML = "";
+    //         break;
+    //     }
+    // }
 
-    for(let i = 0; i < sub3_inputs.length; i++){
-        if (sub3_inputs[i].value != "") {
-            total_calc("sub3");
-        }
-        else{
-            document.querySelector("#sub3").lastElementChild.innerHTML = "";
-            break;
-        }
-    }
+    // for(let i = 0; i < sub2_inputs.length; i++){
+    //     if (sub2_inputs[i].value != "") {
+    //         total_calc("sub2");
+    //     }
+    //     else{
+    //         document.querySelector("#sub2").lastElementChild.innerHTML = "";
+    //         break;
+    //     }
+    // }
 
-    for(let i = 0; i < sub4_inputs.length; i++){
-        if (sub4_inputs[i].value != "") {
-            total_calc("sub4");
-        }
-        else{
-            document.querySelector("#sub4").lastElementChild.innerHTML = "";
-            break;
-        }
-    }
+    // for(let i = 0; i < sub3_inputs.length; i++){
+    //     if (sub3_inputs[i].value != "") {
+    //         total_calc("sub3");
+    //     }
+    //     else{
+    //         document.querySelector("#sub3").lastElementChild.innerHTML = "";
+    //         break;
+    //     }
+    // }
 
-    for(let i = 0; i < sub5_inputs.length; i++){
-        if (sub5_inputs[i].value != "") {
-            total_calc("sub5");
-        }
-        else{
-            document.querySelector("#sub5").lastElementChild.innerHTML = "";
-            break;
-        }
-    }
+    // for(let i = 0; i < sub4_inputs.length; i++){
+    //     if (sub4_inputs[i].value != "") {
+    //         total_calc("sub4");
+    //     }
+    //     else{
+    //         document.querySelector("#sub4").lastElementChild.innerHTML = "";
+    //         break;
+    //     }
+    // }
+
+    // for(let i = 0; i < sub5_inputs.length; i++){
+    //     if (sub5_inputs[i].value != "") {
+    //         total_calc("sub5");
+    //     }
+    //     else{
+    //         document.querySelector("#sub5").lastElementChild.innerHTML = "";
+    //         break;
+    //     }
+    // }
 })
 
 function total_calc(sub){
